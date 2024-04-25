@@ -1,1 +1,1 @@
-docker run -d --name keycloak -p 8080:8080         -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin         -v /Users/mac/Documents/workspace/keycloakTest/data:/opt/keycloak/data/import --restart=unless-stopped         quay.io/keycloak/keycloak:latest         start-dev
+docker run -d --name keycloak -p 8080:8080         -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin         -v /Users/mac/Documents/workspace/keycloakTest/data:/opt/keycloak/data --restart=unless-stopped         quay.io/keycloak/keycloak:latest         start-dev
