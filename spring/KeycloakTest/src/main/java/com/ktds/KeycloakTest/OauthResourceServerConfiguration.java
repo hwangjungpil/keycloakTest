@@ -34,6 +34,8 @@ public class OauthResourceServerConfiguration {
 //                    .requestMatchers(new AntPathRequestMatcher("/")).permitAll()
                     .anyRequest().authenticated()
                 .and()
+                .csrf().disable()
+                .cors().and()
                 .oauth2ResourceServer(OAuth2ResourceServerConfigurer::jwt)
                 .addFilterBefore(createPolicyEnforcerFilter(), BearerTokenAuthenticationFilter.class);
         return http.build();

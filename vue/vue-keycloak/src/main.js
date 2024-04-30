@@ -58,3 +58,5 @@ keycloak.init({ onLoad: initOptions.onLoad, checkLoginIframe: false }).then((aut
 }).catch(() =>{
   Vue.$log.error("Authenticated Failed");
 });
+
+export default keycloak;
