@@ -11,3 +11,11 @@ spring:
       enabled: always
 server:
   port: 8081
+
+logging:
+  level:
+    org:
+      springframework:
+        security: TRACE
+      keycloak:
+        authorization: DEBUG

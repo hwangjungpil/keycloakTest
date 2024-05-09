@@ -13,10 +13,7 @@ http.interceptors.request.use(
     const token = localStorage.getItem("vue-token");
     console.log(token)
     config.headers = {
-      Authorization: `Bearer ${keycloak.token}`,
-      "Referrer-Policy": "strict-origin-when-cross-origin",
-      Accept: "application/json",
-      'Access-Control-Allow-Origin': "*"
+      Authorization: `Bearer ${keycloak.token}`
     };
     return config;
   },
@@ -28,22 +25,10 @@ http.interceptors.request.use(
 http.interceptors.response.use(
     async (config) => {
         config.headers = {
-            'Access-Control-Allow-Origin': "*"
         };
         return config;
     }
 )
 
-// http.interceptors.response.use(
-//     async (config) => {
-//         config.headers = {
-//             'Access-Control-Allow-Origin': "*"
-//         };
-//         return config
-//     },
-//     (error) => {
-//       Promise.reject(error);
-//     }
-// );
 
 export default http;

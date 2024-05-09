@@ -16,7 +16,7 @@ public class Controller {
 
     @GetMapping("/protected/premium")
     public String premium(@AuthenticationPrincipal Jwt jwt){
-        return jwt.getClaimAsString("preferred_username");
+        return "premium "+jwt.getClaimAsString("preferred_username");
     }
 
 }

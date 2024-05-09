@@ -21,7 +21,7 @@ Vue.use(VueLogger, options);
 // }).$mount('#app')
 
 let initOptions = {
-  url: 'http://0.0.0.0:8080', realm: 'SpringBootKeycloak', clientId: 'vue-app', onLoad:'login-required'
+  url: 'http://localhost:8080', realm: 'SpringBootKeycloak', clientId: 'vue-app', onLoad:'login-required'
 }
 
 let keycloak = new Keycloak(initOptions);

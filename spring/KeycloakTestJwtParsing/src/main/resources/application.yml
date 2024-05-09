@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: KeycloakTest
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8080/realms/SpringBootKeycloak/protocol/openid-connect/certs
+  output:
+    ansi:
+      enabled: always
+server:
+  port: 8081
+
+logging:
+  level:
+    org:
+      springframework:
+        security: TRACE
+      keycloak:
+        authorization: DEBUG
