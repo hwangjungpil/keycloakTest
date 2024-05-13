@@ -6,6 +6,7 @@ spring:
       resourceserver:
         jwt:
           jwk-set-uri: http://localhost:8080/realms/SpringBootKeycloak/protocol/openid-connect/certs
+          issuer-uri: http://localhost:8080/realms/SpringBootKeycloak
   output:
     ansi:
       enabled: always

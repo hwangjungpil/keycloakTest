@@ -1,8 +1,0 @@
-{
-  "realm": "SpringBootKeycloak",
-  "auth-server-url": "http://localhost:8080",
-  "resource": "login-app",
-  "credentials": {
-    "secret": "q050MZ6SWOuYQf4lRIYW3RdXKQSWTLqa"
-  }
-}
