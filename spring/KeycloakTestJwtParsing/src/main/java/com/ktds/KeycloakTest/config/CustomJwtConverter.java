@@ -28,7 +28,7 @@ public class CustomJwtConverter implements Converter<Jwt, CustomJwt> {
             var roles = realm_access.get("roles");
             if ( roles instanceof List l){
                 l.forEach( role -> {
-                    result.add(new SimpleGrantedAuthority("ROLE_" + role));
+                    result.add(new SimpleGrantedAuthority("ROLE_"+role.toString()));
                 });
             }
         }

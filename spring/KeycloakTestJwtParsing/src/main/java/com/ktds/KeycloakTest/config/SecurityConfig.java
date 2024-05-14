@@ -22,11 +22,13 @@ public class SecurityConfig {
         http.cors(Customizer.withDefaults())
                 .authorizeHttpRequests(authorize -> authorize.anyRequest().authenticated())
                 .oauth2ResourceServer((oauth2) -> oauth2.jwt(jwt -> jwt.jwtAuthenticationConverter(customJwtConverter())));
+
         http.sessionManagement(manager -> manager.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
         return http.build();
     }
 
-    private Converter<Jwt,? extends AbstractAuthenticationToken> customJwtConverter() {
+    @Bean
+    public Converter<Jwt,? extends AbstractAuthenticationToken> customJwtConverter() {
         return new CustomJwtConverter();
     }
 }
